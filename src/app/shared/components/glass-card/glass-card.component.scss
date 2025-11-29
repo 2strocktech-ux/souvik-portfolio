@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+/* =========================
+   Glass Card (Correct Fix)
+========================= */
+
+.glass-card {
+  position: relative;
+  height: 100%;
+  padding: 22px 24px;
+  border-radius: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  /* ✅ THIS IS THE FIX */
+  overflow: hidden;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+:root .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+
+  border: 1px solid rgba(15, 23, 42, 0.06);
+
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+[data-theme="dark"] .glass-card {
+  background: rgba(15, 23, 42, 0.72);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   Hover
+========================= */
+
+.glass-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+@media (hover: none) {
+  .glass-card:hover {
+    transform: none;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.30),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  }
+}
+

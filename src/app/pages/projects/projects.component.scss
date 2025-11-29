@@ -1,0 +1,136 @@
+/* =========================
+   Projects Section
+========================= */
+
+.projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+}
+
+/* ---------- Header ---------- */
+
+.projects-header {
+  margin-bottom: 56px;
+}
+
+.projects-header h2 {
+  font-size: 40px;
+  letter-spacing: -0.6px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.projects-header p {
+  max-width: 540px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* =========================
+   Main Projects Grid
+========================= */
+
+.projects-grid {
+  display: grid;
+  gap: 28px;
+  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Card Content ---------- */
+
+app-glass-card {
+  display: block;
+  height: 100%;
+}
+
+/* Titles */
+app-glass-card h3,
+.projects-extra-grid app-glass-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+
+/* Summary line */
+.project-summary,
+.projects-extra-grid app-glass-card p {
+  font-size: 14.5px;
+  color: var(--text);
+  opacity: 0.9; /* ✅ soft hierarchy */
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+/* Detail line */
+.project-details {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* =========================
+   Additional Projects
+========================= */
+
+.projects-extra {
+  margin-top: 80px;
+  max-width: 1100px;
+}
+
+.projects-extra h3 {
+  font-size: 22px;
+  margin-bottom: 32px;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.projects-extra-grid {
+  display: grid;
+  gap: 28px;
+  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .projects-extra-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .projects-extra-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .projects {
+    padding: 64px 20px 80px;
+  }
+
+  .projects-header h2 {
+    font-size: 32px;
+  }
+
+  .projects-header p {
+    font-size: 14px;
+  }
+}

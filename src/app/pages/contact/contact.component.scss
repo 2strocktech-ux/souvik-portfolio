@@ -1,0 +1,160 @@
+.contact {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Heading */
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+/* Intro text */
+.contact-intro {
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Form layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  font-size: 14px;
+  border-radius: 14px;
+  font-family: inherit;
+
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #020617;
+
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Submit button */
+.contact-btn {
+  align-self: center;
+  min-width: 180px;
+  margin-top: 12px;
+}
+
+/* Button style (matches hero) */
+.primary {
+  background: #0f172a;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 14px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.35);
+}
+
+/* Status messages */
+.contact-status {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.contact-status.success {
+  color: #16a34a;
+}
+
+.contact-status.error {
+  color: #dc2626;
+}
+
+/* Direct email */
+.contact-direct {
+  margin-top: 28px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.contact-direct a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-direct a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Dark Mode Support
+========================= */
+
+[data-theme="dark"] .contact h2 {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .contact-intro,
+[data-theme="dark"] .contact-direct {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .contact-form input::placeholder,
+[data-theme="dark"] .contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+@media (max-width: 768px) {
+  .contact {
+    padding: 0 20px;
+  }
+
+  .contact h2 {
+    font-size: 34px;
+  }
+
+  .contact-intro {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px; /* ✅ prevents iOS zoom */
+  }
+
+  .contact-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}

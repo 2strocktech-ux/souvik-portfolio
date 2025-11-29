@@ -1,0 +1,20 @@
+<header class="navbar" [class.hidden]="navHidden">
+  <div class="nav-left">Souvik</div>
+  <div class="nav-right">
+    <nav class="nav-links">
+      <a [class.active]="active === 'hero'" (click)="scroll('hero')">Home</a>
+      <a [class.active]="active === 'about'" (click)="scroll('about')">About</a>
+      <a [class.active]="active === 'projects'" (click)="scroll('projects')">Projects</a>
+      <a [class.active]="active === 'contact'" (click)="scroll('contact')">Contact</a>
+    </nav>
+
+    <!-- ✅ Theme Toggle -->
+    <button class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
+      {{ currentTheme === 'dark' ? '☀️' : '🌙' }}
+    </button>
+  </div>
+</header>
+<div class="scroll-progress">
+  <span [style.transform]="progressTransform"></span>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,55 @@
+<section class="section hero" id="hero">
+  <div class="hero-inner" #heroInner>
+    <h1 #title>
+      Building <span>modern</span><br />
+      web experiences
+    </h1>
+
+    <p #subtitle>
+      Full Stack Developer with 5+ years of experience building
+      enterprise web applications using Angular, .NET, and SQL Server.
+      I focus on clean architecture and interfaces that remain fast,
+      predictable, and maintainable at scale.
+    </p>
+
+
+    <!-- ✅ NEW: supporting text -->
+    <p class="hero-sub">
+      Experienced in ERP, HRMS, and internal business platforms where
+      performance, data accuracy, and long-term stability matter more
+      than trends.
+    </p>
+
+    <div class="hero-actions" #actions>
+      <button class="primary" (click)="scrollTo('projects')">
+        View Projects
+      </button>
+
+      <button class="secondary" (click)="scrollTo('contact')">
+        Contact
+      </button>
+    </div>
+    <div class="hero-metrics">
+      <span>5+ Years Experience</span>
+      <span>Enterprise ERP / HRMS</span>
+      <span>Angular · .NET · SQL Server</span>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <app-about></app-about>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <app-projects></app-projects>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <app-contact></app-contact>
+</section>

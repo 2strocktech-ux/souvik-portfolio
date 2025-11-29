@@ -1,0 +1,52 @@
+<section class="contact" id="contact" #contactSection>
+  <h2 #item>Contact</h2>
+
+  <p class="contact-intro" #item>
+    If you’d like to discuss an opportunity or collaboration, feel free to send a message.
+    I usually respond within 24 hours.
+  </p>
+
+  <form class="contact-form" (submit)="sendMail()">
+    <input
+      type="text"
+      placeholder="Your name"
+      [(ngModel)]="form.name"
+      name="name"
+      required
+    />
+
+    <input
+      type="email"
+      placeholder="Your email"
+      [(ngModel)]="form.email"
+      name="email"
+      required
+    />
+
+    <textarea
+      placeholder="Your message"
+      [(ngModel)]="form.message"
+      name="message"
+      required
+    ></textarea>
+
+    <button type="submit" class="primary contact-btn">
+      Send Message
+    </button>
+  </form>
+
+  <p class="contact-status success" *ngIf="status === 'success'">
+    ✅ Message sent successfully.
+  </p>
+
+  <p class="contact-status error" *ngIf="status === 'error'">
+    ❌ Something went wrong. Please try again.
+  </p>
+
+  <p class="contact-direct" #item>
+    Or email me directly at
+    <a href="mailto:souvikparui369@gmail.com">
+      souvikparui369&#64;gmail.com
+    </a>
+  </p>
+</section>
